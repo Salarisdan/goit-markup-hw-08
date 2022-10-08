@@ -1,0 +1,151 @@
+.menu-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+
+}
+
+.menu-container{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    padding: 40px 48px;
+
+    background-color: #fff;
+
+    transform: translateX(100%);
+    transition: transform 400ms;
+
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+}
+
+.mobile-menu{
+    margin-bottom: auto;
+}
+
+.menu-toggle{
+    position: absolute;
+    top: 21px;
+    right: 25px;
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+.menu-toggle:hover, .menu-toggle:focus{
+    fill: #2196F3;
+}
+
+.mobile-socials{
+    display: flex;
+    margin-top: 64px;
+    list-style-type: none;
+  
+  padding: 0;
+}
+
+.link{
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    
+    color: var(--black);
+}
+
+.link:hover, link:focus{
+    color: var(--blue);
+}
+
+.link-tell{
+    font-style: normal;
+font-weight: 500;
+font-size: 34px;
+line-height: 40px;
+letter-spacing: 0.02em;
+color: var(--black);
+}
+.link-tell:hover, .link-tell:focus{
+    color:var(--blue)
+}
+
+.link-maill{
+    font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+letter-spacing: 0.02em;
+color: var(--gray);
+}
+.link-maill:hover, .link-maill:focus{
+    color: var(--blue);
+}
+
+.nav-studio{
+    margin-top: 48px;
+}
+.nav-portfolio{
+    margin-top: 35px;
+}
+.nav-contacts{
+    margin-top: 32px;
+}
+.nav-maill{
+margin-top: 32px;
+}
+
+.link-soc{
+    
+    font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+letter-spacing: 0.02em;
+color: var(--blue);
+}
+
+
+
+.mobile-socials, .soc-link{
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+
+
+.soc-link:not(:last-child){
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+}

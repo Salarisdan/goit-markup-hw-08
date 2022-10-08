@@ -1,0 +1,35 @@
+/*block 2*/
+body{
+    font-family:'Roboto',sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+  background: var(--white);  
+ 
+  }
+
+
+  
+
+  .section{
+    padding-top: 94px;
+      padding-bottom: 94px;
+  }
+
+  .list {
+    @include list($jc: center, $ai: center);
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  .socials {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  // .header{
+  //   border-bottom:  1px solid var(--lite-gray);
+  //   display: flex;
+  //   background: var(--white);
+
+  //   }

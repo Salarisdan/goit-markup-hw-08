@@ -1,0 +1,43 @@
+// mixins
+
+@import './decimals';
+
+@mixin section ($pt: 94px, $pb: 94px){
+    padding-top: $pt;
+    padding-bottom: $pb;
+}
+
+
+@mixin fonts ($fw: 400, $fs: 14px, $lh: 24px, $ls: 0.02em) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: decimal-round($lh / $fs);
+    letter-spacing: $ls;
+}
+    
+@mixin transition ($one: null, $two: null, $three: null, $time: 250ms, $func: cubic-bezier(0.4, 0, 0.2, 1)) {
+    transition-property: $one, $two, $three;
+    transition-duration: $time;
+    transition-timing-function: $func;
+
+
+}
+
+@mixin item ($q-gap, $gap, $q-item) {
+    flex-basis: calc((100% - #{$q-gap} * #{$gap}) / #{$q-item});
+
+}
+
+@mixin list($jc: null, $ai: null, $d: flex, $gap: var(--gap)){
+    justify-content: $jc;
+    align-items: $ai;
+     display: $d;
+    gap: $gap;
+}
+// @mixin font($ff, $fs, $fw, $lh, $ls, $fc) {
+//     font-family: $ff;
+//     font-size: $fs;
+//     font-weight: $fw;
+//     line-height: $lh;
+//     letter-spacing: $ls;
+//     color: $fc;

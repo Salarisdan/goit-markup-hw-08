@@ -1,0 +1,137 @@
+
+  
+  .register__form-group{
+    margin-bottom: 20px;
+  }
+  
+  .register__form-field{
+    display: block;
+    position: relative;
+  }
+  
+  
+  .icon__cross{
+    transition-property: fill;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .icon__cross:hover{
+    fill: var(--blue);
+  }
+  
+  .register__form-input{
+    width: 448px;
+    height: 45px;
+    padding-left: 45px;
+    margin-bottom: 11px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+
+  &:focus{
+    border-color: var(--blue);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  }
+
+  .register__form-icon-one{
+    position: absolute;
+    top: 60%;
+    left: 15px;
+    margin-bottom: 15px;
+    transform: translateY(-60%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .register__form-icon{
+    position: absolute;
+    top: 55%;
+    left: 15px;
+    transform: translateY(-55%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .register__form-input:focus + .register__form-icon  {
+    fill: var(--blue);
+  }
+  .register__form-input:focus + .register__form-icon-one{
+  fill: var(--blue);
+  }
+
+  .register__form-field-coment{
+    display: block;
+    font-style: normal;
+    margin-bottom: 4px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--gray);
+  }
+
+  .register__form-message{
+    resize: none;
+    outline: transparent;
+    width: 100%;
+  height: 120px;
+  padding: 12px 16px 12px 16px;
+  
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+ &:focus{
+  border-color : var(--blue);
+  
+}
+  }
+
+  .register__form-agreement{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px;
+  
+    font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #757575;
+  }
+
+  .register__form-btn{
+    width: 200px;
+    height: 50px;
+  }
+  
+  .register__form-link{
+    color: var(--blue);
+    text-decoration: underline;
+  }
+  
+  .icon__checked{
+    opacity: 0;
+    transition: opacity fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .register__form-checkbox:checked + .register__form-icons .icon__checked{
+    opacity: 1;
+  }
+  
+  .icon__unchecked{
+    opacity: 1;
+    transition: opacity, fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .register__form-checkbox:checked + .register__form-icons .icon__unchecked{
+    opacity: 0;
+  }
+  
+  
+  .register__form-btn{
+    display: block;
+    margin: 0 auto;
+  }

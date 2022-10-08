@@ -1,0 +1,32 @@
+.team__social{
+    display: flex;
+    gap: 10px;
+    
+    justify-content: center;
+  }
+  
+  .social-link__team{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--white);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+}
+
+.social-link__team:hover,
+.social-link__team:focus{
+  background-color: var(--blue);
+}
+
+.social-link__team:hover .social-icon__team,
+.social-link__team:focus .social-icon__team{
+  fill: var(--white);
+}
+  
+  .social-icon__team{
+    fill: var(--social-gray);
+  }
