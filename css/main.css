@@ -1612,7 +1612,6 @@ form {
 }
 
 .portfolio__item {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1625,6 +1624,12 @@ form {
     -ms-flex-preferred-size: calc((100% - 1 * var(--gap)) / 2);
         flex-basis: calc((100% - 1 * var(--gap)) / 2);
     margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    -ms-flex-preferred-size: calc((100% - 2 * var(--gap)) / 3);
+        flex-basis: calc((100% - 2 * var(--gap)) / 3);
   }
 }
 

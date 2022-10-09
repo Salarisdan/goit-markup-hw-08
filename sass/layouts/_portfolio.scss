@@ -97,17 +97,20 @@
       }
 
         .portfolio__item{
-            position: relative;
-            display: flex;
-  max-width: 450px;
-  background-color: var(--white);
-  margin-bottom: 30px;
-
-  @media screen and (min-width: 768px) {
-    @include item(1, var(--gap), 2);
-    margin-bottom: 0;
-    // flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-  }
+          display: flex;
+          max-width: 450px;
+          background-color: var(--white);
+          margin-bottom: 30px;
+        
+          @media screen and (min-width: 768px) {
+            @include item(1, var(--gap), 2);
+            margin-bottom: 0;
+            // flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+          }
+        
+          @media screen and (min-width: 1200px) {
+            @include item(2, var(--gap), 3);
+          }
   
   }
 
