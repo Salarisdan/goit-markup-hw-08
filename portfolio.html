@@ -19,16 +19,17 @@
     <header class="header">
        
         <div class="container header__container">
+            <a class="logo header__logo" href="./index.html"><span class="logo-header">Web</span>Studio</a>
     <nav class="nav" >
-        <a class="logo header__logo" href="./index.html"><span class="logo-header">Web</span>Studio</a>
-        <ul class="nav__list ">
-            <li class="nav__item"> <a  class="navigation "  href="./index.html"> Студія</a> </li> 
-            <li class="nav__item"> <a  class="navigation  current"  href="./portfolio.html"> Портфоліо</a>  </li>
+        
+          <ul class="nav__list ">
+             <li class="nav__item"> <a  class="navigation current"  href="./index.html"> Студія</a> </li> 
+            <li class="nav__item"> <a  class="navigation"  href="./portfolio.html"> Портфоліо</a>  </li>
             <li class="nav__item"> <a class="navigation" href="#"> Контакти</a> </li>
         </ul>
             </nav>
 
-            <ul class="nav__list connect">
+            <ul class="connect">
 
                 <li class="nav__contacts"><a href="mailto:info@devstudio.com" lang="en"  class="nav_mail_tel">
                     <svg class="icon_nav" >
@@ -42,16 +43,30 @@
                     </svg>
                     +38096111111</a>
                 </li>
-            </ul>
+            </ul>  
+            <button 
+            class="menu-btn js-open-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="40" height="40">
+              <use href="./images/menu/symbol-defs.svg#icon-menu-btn"></use>
+            </svg>
+          </button>
         </div>
-    </header>
+
+
+      
+     
+    </header> 
 
 
         <main class="main_container">
 
             <!--Кнопки-->
         <section class="portfolio__section">
-            <div class="portfolio__section-container">
+            <div class="container portfolio__section-container">
             <h2 class="visually-hidden">Кнопочки</h2>
             <ul class="keyboard">
            <li> <button type="button" class="btn about__button" >Усі</button></li>
@@ -67,7 +82,14 @@
                         <div class="wrap">
                            
                 <div class="billboard__thumb"> 
-                     <img  src="images/technocrack.jpg" alt="Технокряк"> 
+                    <picture>
+                        <!-- Desktop -->
+                        <source media="(min-width: 1200px)" srcset="./images/Portfolio/img11_l@1x.jpg 1x, ./images/Portfolio/img11_l@2x.jpg 2x" />
+                        <!-- Tablet -->
+                        <source media="(min-width: 768px)" srcset="./images/Portfolio/img11_m@1x.jpg 1x, ./images/Portfolio/img11_m@2x.jpg 2x" />
+                        <!-- Mobile -->
+                        <source media="(max-width: 767px)" srcset="./images/Portfolio/img11_s@1x.jpg 1x, ./images/Portfolio/img11_s@2x.jpg 2x" />
+                        <img class="img" src="./images/Portfolio/img11_l@1x.jpg" alt="Ноутбук" />
                      <div class="overlay">
                         <p class="overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                      </div>
@@ -87,7 +109,15 @@
                     <a href="#" class="galery__link">
                         <div class="wrap">
                             <div class="billboard__thumb">
-                    <img src="images/poster-new-orlean-vs-golden-star.jpg"  alt="Постер New Orlean vs Golden Star">
+                                <picture>
+                                    <!-- Desktop -->
+                                    <source media="(min-width: 1200px)" srcset="./images/Portfolio/img22_l@1x.jpg 1x, ./images/Portfolio/img22_l@2x.jpg 2x" />
+                                    <!-- Tablet -->
+                                    <source media="(min-width: 768px)" srcset="./images/Portfolio/img22_m@1x.jpg 1x, ./images/Portfolio/img22_m@2x.jpg 2x" />
+                                    <!-- Mobile -->
+                                    <source media="(max-width: 767px)" srcset="./images/Portfolio/img22_s@1x.jpg 1x, ./images/Portfolio/img22_s@2x.jpg 2x" />
+                                    <img class="img" src="./images/Portfolio/img22_l@1x.jpg" alt="Постер" />
+                                  </picture>
                     <div class="overlay">
                         <p class="overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                      </div>
@@ -105,7 +135,15 @@
                     <a href="#" class="galery__link">
                         <div class="wrap">
                             <div class="billboard__thumb">
-                    <img src="images/restoran-seafood.jpg"  alt="Ресторан Seafood">
+                                <picture>
+                                    <!-- Desktop -->
+                                    <source media="(min-width: 1200px)" srcset="./images/Portfolio/img33_l@1x.jpg 1x, ./images/Portfolio/img33_l@2x.jpg 2x" />
+                                    <!-- Tablet -->
+                                    <source media="(min-width: 768px)" srcset="./images/Portfolio/img33_m@1x.jpg 1x, ./images/Portfolio/img33_m@2x.jpg 2x" />
+                                    <!-- Mobile -->
+                                    <source media="(max-width: 767px)" srcset="./images/Portfolio/img33_s@1x.jpg 1x, ./images/Portfolio/img33_s@2x.jpg 2x" />
+                                    <img class="img" src="./images/Portfolio/img33_l@1x.jpg" alt="логотип ресторану" />
+                                  </picture>
                     <div class="overlay">
                         <p class="overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                      </div>
@@ -123,8 +161,15 @@
                     <a href="#" class="galery__link">
                         <div class="wrap">
                             <div class="billboard__thumb">
-                    <img src="images/project-prime.jpg"  alt="Проєкт Prime">
-                    <div class="overlay">
+                                <picture>
+                                    <!-- Desktop -->
+                                    <source media="(min-width: 1200px)" srcset="./images/Portfolio/img44_l@1x.jpg 1x, ./images/Portfolio/img44_l@2x.jpg 2x" />
+                                    <!-- Tablet -->
+                                    <source media="(min-width: 768px)" srcset="./images/Portfolio/img44_m@1x.jpg 1x, ./images/Portfolio/img44_m@2x.jpg 2x" />
+                                    <!-- Mobile -->
+                                    <source media="(max-width: 767px)" srcset="./images/Portfolio/img44_s@1x.jpg 1x, ./images/Portfolio/img44_s@2x.jpg 2x" />
+                                    <img class="img" src="./images/Portfolio/img44_l@1x.jpg" alt="Навушники" />
+                                  </picture>
                         <p class="overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                      </div>
                     </div>  
@@ -141,7 +186,15 @@
                     <a href="#" class="galery__link">
                         <div class="wrap">
                             <div class="billboard__thumb">
-                    <img src="images/project-boxes.jpg"  alt="Проєкт Boxes">
+                                <picture>
+                                    <!-- Desktop -->
+                                    <source media="(min-width: 1200px)" srcset="./images/Portfolio/img55_l@1x.jpg 1x, ./images/Portfolio/img55_l@2x.jpg 2x" />
+                                    <!-- Tablet -->
+                                    <source media="(min-width: 768px)" srcset="./images/Portfolio/img55_m@1x.jpg 1x, ./images/Portfolio/img55_m@2x.jpg 2x" />
+                                    <!-- Mobile -->
+                                    <source media="(max-width: 767px)" srcset="./images/Portfolio/img55_s@1x.jpg 1x, ./images/Portfolio/img55_s@2x.jpg 2x" />
+                                    <img class="img" src="./images/Portfolio/img55_l@1x.jpg" alt="Коробочки" />
+                                  </picture>
                     <div class="overlay">
                         <p class="overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                      </div>
@@ -158,7 +211,15 @@
                     <a href="#" class="galery__link">
                         <div class="wrap">
                             <div class="billboard__thumb">
-                    <img src="images/inspiration-has-no-borders.jpg"  alt="Inspiration has no Borders">
+                                <picture>
+                                    <!-- Desktop -->
+                                    <source media="(min-width: 1200px)" srcset="./images/Portfolio/img66_l@1x.jpg 1x, ./images/Portfolio/img66_l@2x.jpg 2x" />
+                                    <!-- Tablet -->
+                                    <source media="(min-width: 768px)" srcset="./images/Portfolio/img66_m@1x.jpg 1x, ./images/Portfolio/img66_m@2x.jpg 2x" />
+                                    <!-- Mobile -->
+                                    <source media="(max-width: 767px)" srcset="./images/Portfolio/img66_s@1x.jpg 1x, ./images/Portfolio/img66_s@2x.jpg 2x" />
+                                    <img class="img" src="./images/Portfolio/img66_l@1x.jpg" alt="перегляд сайту" />
+                                  </picture>
                     <div class="overlay">
                         <p class="overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                      </div>
@@ -177,7 +238,15 @@
                     <a href="#" class="galery__link">
                         <div class="wrap">
                             <div class="billboard__thumb">
-                    <img src="images/booking-limited-edition.jpg"  alt="Видання Limited Edition">
+                                <picture>
+                                    <!-- Desktop -->
+                                    <source media="(min-width: 1200px)" srcset="./images/Portfolio/img77_l@1x.jpg 1x, ./images/Portfolio/img77_l@2x.jpg 2x" />
+                                    <!-- Tablet -->
+                                    <source media="(min-width: 768px)" srcset="./images/Portfolio/img77_m@1x.jpg 1x, ./images/Portfolio/img77_m@2x.jpg 2x" />
+                                    <!-- Mobile -->
+                                    <source media="(max-width: 767px)" srcset="./images/Portfolio/img77_s@1x.jpg 1x, ./images/Portfolio/img77_s@2x.jpg 2x" />
+                                    <img class="img" src="./images/Portfolio/img77_l@1x.jpg" alt="Журнал" />
+                                  </picture>
                     <div class="overlay">
                         <p class="overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                      </div>
@@ -195,7 +264,15 @@
                     <a href="#" class="galery__link">
                         <div class="wrap">
                             <div class="billboard__thumb">
-                    <img src="images/project-lab.jpg"  alt="Проєкт LAB">
+                                <picture>
+                                    <!-- Desktop -->
+                                    <source media="(min-width: 1200px)" srcset="./images/Portfolio/img88_l@1x.jpg 1x, ./images/Portfolio/img88_l@2x.jpg 2x" />
+                                    <!-- Tablet -->
+                                    <source media="(min-width: 768px)" srcset="./images/Portfolio/img88_m@1x.jpg 1x, ./images/Portfolio/img88_m@2x.jpg 2x" />
+                                    <!-- Mobile -->
+                                    <source media="(max-width: 767px)" srcset="./images/Portfolio/img88_s@1x.jpg 1x, ./images/Portfolio/img88_s@2x.jpg 2x" />
+                                    <img class="img" src="./images/Portfolio/img88_l@1x.jpg" alt="стиль тегу" />
+                                  </picture>
                     <div class="overlay">
                         <p class="overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                      </div>
@@ -213,7 +290,15 @@
                     <a href="#" class="galery__link">
                         <div class="wrap">
                             <div class="billboard__thumb">
-                    <img src="images/growing-business.jpg"  alt="Growing Business">
+                                <picture>
+                                    <!-- Desktop -->
+                                    <source media="(min-width: 1200px)" srcset="./images/Portfolio/img99_l@1x.jpg 1x, ./images/Portfolio/img99_l@2x.jpg 2x" />
+                                    <!-- Tablet -->
+                                    <source media="(min-width: 768px)" srcset="./images/Portfolio/img99_m@1x.jpg 1x, ./images/Portfolio/img99_m@2x.jpg 2x" />
+                                    <!-- Mobile -->
+                                    <source media="(max-width: 767px)" srcset="./images/Portfolio/img99_s@1x.jpg 1x, ./images/Portfolio/img99_s@2x.jpg 2x" />
+                                    <img class="img" src="./images/Portfolio/img99_l@1x.jpg" alt="Веб-розробка" />
+                                  </picture>
                     <div class="overlay">
                         <p class="overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                      </div>
