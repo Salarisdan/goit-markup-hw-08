@@ -16,19 +16,31 @@
   (min-resolution: 2dppx){
     background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_lg-@2x.png);
   }
-// TABLET IMAGES
-  @media screen and(min-width:481px) {
-    background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_md-@1x.png);
+// MOBILE IMAGES
+  @media screen and(min-width:480px) {
+    background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_sm-@1x.png);
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx){
-      background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_md-@2x.png);
+      background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_sm-@2x.png);
   }
  }
 
- // DESCTOP IMAGES
+ // TABLET IMAGES
  @media screen and(min-width:769px) {
+  background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_md-@1x.png);
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx){
+    background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_md-@2x.png);
+}
+}
+
+
+// DESCTOP IMAGES
+@media screen and(min-width:1200px) {
   background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_lg-@1x.png);
 
   @media (min-device-pixel-ratio: 2),
