@@ -1,12 +1,14 @@
-.portfolio__section{
+
+ .portfolio__section{
   @include section();
   @media screen and (min-width: 1200px) {
     @include section (94px, 94px);
   }
-  }
-
-  .portfolio__section-container{
-     // Desctop
+ }
+ 
+ 
+ .portfolio__section-container{
+  // Desctop
   @media screen and(min-width:1200px) {
     width: 1200px;
     padding-left: 15px;
@@ -30,25 +32,32 @@
   margin-left: auto;
   margin-right: auto;
 }
+
   }
 
   .keyboard{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 8px;
-    margin-bottom: 50px;
+  gap: 8px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 
-    @media screen and (min-width: 768px) {
-      justify-content: center;
-      margin-bottom: 30px;
-    }
+  list-style: none;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
   
-    @media screen and (min-width: 1200px) {
-      // justify-content: center;
-      margin-bottom: 50px;
-    }
+    list-style: none;
+    margin-bottom: 50px;
+  }
+
     }
 
     .btn{
@@ -79,11 +88,11 @@
       }
       
       .billboard{
-        @media screen and (min-width: 768px) {
+      
           display: flex;
           flex-wrap: wrap;
           gap: 30px;
-        }
+        
       
       }
 
@@ -93,15 +102,11 @@
   max-width: 450px;
   background-color: var(--white);
   margin-bottom: 30px;
-
-  @media screen and (min-width: 768px) {
-    @include item(1, var(--gap), 2);
-    margin-bottom: 0;
-    // flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+  
   }
 
             
-          }
+          
 
           .galery__link{
             text-decoration: none;
@@ -144,7 +149,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color:  rgba(33, 150, 243, 0.9);;
+            background-color:  rgba(33, 150, 243, 0.9);
+
+            @media screen and (min-width: 768px) {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              }
+            
+              @media screen and (min-width: 768px){
+                padding-top: 63px;
+                padding-bottom: 63px;
+              }
           }
 
           .padding__item{
