@@ -87,8 +87,7 @@
    .nav_mail_tel{
     display: flex;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+
     color: var(--gray);
     fill: currentColor;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -113,9 +112,7 @@
    letter-spacing: 0.02em;
   }
   
-  .nav__contacts:not(:first-child){
-    margin-left: 50px;
-  }
+
   
   
   .icon_nav{

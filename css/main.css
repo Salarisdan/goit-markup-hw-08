@@ -601,8 +601,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--gray);
   fill: currentColor;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -623,10 +621,6 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
-
-.nav__contacts:not(:first-child) {
-  margin-left: 50px;
 }
 
 .icon_nav {
@@ -729,22 +723,7 @@ img {
     color: var(--white);
   }
 }
-@media screen and (min-width: 480px) {
-  .hero__bissnes {
-    width: 360px;
-    margin-left: auto;
-    margin-right: auto;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 42px;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--white);
-  }
-}
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
   .hero__bissnes {
     width: 360px;
     margin-left: auto;
