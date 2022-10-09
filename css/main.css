@@ -539,9 +539,6 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     gap: 10px;
   }
 }
@@ -630,7 +627,6 @@ img {
 }
 
 .icon_nav_tel {
-  margin-left: 30px;
   margin-right: 10px;
   width: 10px;
   height: 16px;
@@ -652,32 +648,32 @@ img {
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/price/Img_lg-@2x.png);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/price/Img_lg-@2x.png);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/price/Img_lg-@2x.png);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_lg-@2x.png);
   }
 }
 @media screen and (min-width: 481px) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/price/Img_md-@1x.png);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/price/Img_md-@1x.png);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/price/Img_md-@1x.png);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_md-@1x.png);
   }
 }
 @media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/price/Img_md-@2x.png);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/price/Img_md-@2x.png);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/price/Img_md-@2x.png);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_md-@2x.png);
   }
 }
 @media screen and (min-width: 769px) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/price/Img_lg-@1x.png);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/price/Img_lg-@1x.png);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/price/Img_lg-@1x.png);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_lg-@1x.png);
   }
 }
 @media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/price/Img_lg-@2x.png);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/price/Img_lg-@2x.png);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/price/Img_lg-@2x.png);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_lg-@2x.png);
   }
 }
 
@@ -894,8 +890,14 @@ img {
 }
 
 .annex {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .annex {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 94px;
+  }
 }
 
 .annex-writing {
@@ -1801,6 +1803,18 @@ form {
   -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.04);
           box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.04);
 }
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: calc(100% - 30px);
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}
 
 .modal_btn {
   position: absolute;
@@ -1846,7 +1860,7 @@ form {
 }
 
 .register__form-input {
-  width: 448px;
+  width: 100%;
   height: 45px;
   padding-left: 45px;
   margin-bottom: 11px;
@@ -1929,13 +1943,20 @@ form {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 30px;
-  gap: 10px;
+  gap: 8px;
+  width: 100%;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
   color: #757575;
+}
+@media screen and (max-width: 1199px) {
+  .register__form-agreement {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 .register__form-btn {
@@ -1988,7 +2009,6 @@ form {
   padding: 0;
   margin-left: auto;
   margin-top: 10px;
-  margin-right: 15px;
   margin-bottom: 10px;
   background-color: transparent;
   border: none;
@@ -2004,7 +2024,7 @@ form {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 99999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2035,6 +2055,7 @@ form {
 
 .mobile-menu {
   margin-bottom: auto;
+  display: block;
 }
 
 .menu-toggle {
@@ -2054,7 +2075,6 @@ form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 64px;
   list-style-type: none;
   padding: 0;
 }
@@ -2126,6 +2146,11 @@ form {
 .mobile-socials, .soc-link {
   padding-right: 10px;
   margin-right: 10px;
+}
+
+.mobile-contacts {
+  display: block;
+  margin-bottom: 64px;
 }
 
 .soc-link:not(:last-child) {

@@ -8,7 +8,7 @@
     padding: 0;
     margin-left: auto;
     margin-top: 10px;
-    margin-right: 15px;
+    
     margin-bottom: 10px;
 
     background-color: transparent;
@@ -23,10 +23,11 @@
 }
 
 .menu-container{
+    
     position: fixed;
     top: 0; 
     left: 0;
-    z-index: 1000;
+    z-index: 99999;
 
     display: flex;
     flex-direction: column;
@@ -51,6 +52,7 @@
 
 .mobile-menu{
     margin-bottom: auto;
+    display: block;
 }
 
 .menu-toggle{
@@ -69,7 +71,7 @@
 
 .mobile-socials{
     display: flex;
-    margin-top: 64px;
+    
     list-style-type: none;
   
   padding: 0;
@@ -142,6 +144,11 @@ color: var(--blue);
 .mobile-socials, .soc-link{
     padding-right: 10px;
     margin-right: 10px;
+}
+
+.mobile-contacts{
+    display: block;
+    margin-bottom: 64px;
 }
 
 
