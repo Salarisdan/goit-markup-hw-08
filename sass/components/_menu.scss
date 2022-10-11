@@ -1,158 +1,130 @@
-.menu-btn{
+.menu-btn {
     display: flex;
-    align-items: center;
     justify-content: center;
-
+    align-items: center;
+  
     width: 40px;
     height: 40px;
     padding: 0;
     margin-left: auto;
-    margin-top: 10px;
-    
-    margin-bottom: 10px;
-
+  
     background-color: transparent;
     border: none;
-
     cursor: pointer;
-
-    @media screen and (min-width:768px) {
-        display: none;
+    @include transition (fill);
+  
+    &:hover,
+    &:focus{
+      fill: var(--active-link-txt);
     }
-
-}
-
-.menu-container{
-    
-    position: fixed;
-    top: 0; 
-    left: 0;
-    z-index: 99999;
-
+  
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  
+  .menu-container {
     display: flex;
     flex-direction: column;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+  
+    padding: 48px 40px;
     width: 100%;
     height: 100%;
-    padding: 40px 48px;
-
-    background-color: #fff;
-
+  
+    background-color: var(--additional-bg-cl);
     transform: translateX(100%);
-    transition: transform 400ms;
-
+    @include transition(transform);
+  
     &.is-open {
-        transform: translateX(0);
+      transform: translateX(0);
     }
-
-    @media screen and (min-width:768px) {
-        display: none;
+  
+    @media screen and (min-width: 768px) {
+      display: none;
     }
-}
-
-.mobile-menu{
-    margin-bottom: auto;
-    display: block;
-}
-
-.menu-toggle{
+  }
+  
+  .menu-toggle {
     position: absolute;
-    top: 21px;
-    right: 25px;
+    top: 10px;
+    right: 15px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  
     background-color: transparent;
     border: none;
-
     cursor: pointer;
-}
-
-.menu-toggle:hover, .menu-toggle:focus{
-    fill: #2196F3;
-}
-
-.mobile-socials{
-    display: flex;
-    
-    list-style-type: none;
+    @include transition(fill);
   
-  padding: 0;
-}
-
-.link{
-    
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 47px;
-    letter-spacing: 0.02em;
-    
-    color: var(--black);
-}
-
-.link:hover, link:focus{
-    color: var(--blue);
-}
-
-.link-tell{
-    font-style: normal;
-font-weight: 500;
-font-size: 34px;
-line-height: 40px;
-letter-spacing: 0.02em;
-color: var(--black);
-}
-.link-tell:hover, .link-tell:focus{
-    color:var(--blue)
-}
-
-.link-maill{
-    font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 28px;
-letter-spacing: 0.02em;
-color: var(--gray);
-}
-.link-maill:hover, .link-maill:focus{
-    color: var(--blue);
-}
-
-.nav-studio{
-    margin-top: 48px;
-}
-.nav-portfolio{
-    margin-top: 35px;
-}
-.nav-contacts{
-    margin-top: 32px;
-}
-.nav-maill{
-margin-top: 32px;
-}
-
-.link-soc{
-    
-    font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 22px;
-letter-spacing: 0.02em;
-color: var(--blue);
-}
-
-
-
-.mobile-socials, .soc-link{
-    padding-right: 10px;
-    margin-right: 10px;
-}
-
-.mobile-contacts{
-    display: block;
+    &:hover,
+    &:focus {
+      fill: var(--active-link-txt);
+    }
+  }
+  
+  .mobile-menu {
+    list-style: none;
+    margin-bottom: auto;
+  }
+  
+  .mobile-menu__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  
+  .mobile-menu__link {
+    text-decoration: none;
+    @include fonts(500, 40px, 47px);
+    color: var(--main-txt-cl);
+    &--current,
+    &:focus {
+      color: var(--active-link-txt);
+    }
+  }
+  
+  .mobile-contacts {
+    list-style: none;
     margin-bottom: 64px;
-}
-
-
-
-.soc-link:not(:last-child){
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
-}
+  }
+  
+  .mobile-contacts__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  
+  .mobile-contacts__link {
+    text-decoration: none;
+  }
+  
+  .mobile-contacts__link--tel {
+    color: var(--active-link-txt);
+    @include fonts(500, 34px, 40px);
+  }
+  
+  .mobile-contacts__link--mail {
+    color: var(--secondary-txt-cl);
+    @include fonts(500, 24px, 28px);
+  }
+  
+  .mobile-socials {
+    list-style: none;
+    @include list($gap: 10px);
+    flex-wrap: wrap;
+  }
+  
+  .mobile-socials__item:not(:last-child) {
+    border-right: 1px solid var(--modal-border-cl);
+    padding-right: 10px;
+  }
+  
+  .mobile-socials__link {
+    display: block;
+    text-decoration: none;
+    @include fonts(500, 18px, 22px);
+    color: var(--active-link-txt);
+  }

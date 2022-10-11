@@ -1,101 +1,62 @@
-.section{   padding-top: 60px;
-  padding-bottom: 60px;}
+.team {
+  background-color: var(--secondary-bg-cl);
+}
 
-.team{
- 
-    background: var(--light-gray);}
-  
-    .team__container{
-      // DESCTOP
-      @media screen and (min-width:1200px) {
-        max-width: 1200px;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-      }
+.team__list {
+  display: block;
 
-      // MOBILE
-      @media screen and (max-width:480px) {
-        max-width: 480px;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-      }
+  @media screen and (min-width: 768px) {
+    @include list(center, center);
+  }
+}
 
-      //TABLET
-      @media screen and (max-width:768px) {
-        max-width: 768px;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-   
-    }
-    .team__card{
-      padding: 30px;
-      }
-  
-     .team-my{
-      text-align: center;
-  margin-bottom: 50px;
-  
-      font-weight: 700;
-      letter-spacing: 0.03em;
-     font-size: 36px;
-    line-height:42.19px;
-    text-align: center;
-        color: var(--black);
-    }
-  
-    .team__ul{
-      // DESCTOP
-      @media screen and(min-width:1201px) {
-        display: flex;
-        gap: 30px;
-      }
-
-      // MOBILE
-      @media screen and (min-width:480px) {
-        display: block;
-      }
-      // TABLET
-      @media screen and(min-width:768px) {
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-      }
-    }
-  
-   .team_name{
-    margin-bottom: 10px;
-    font-size: 16px;
-   }
-  
-   .team__li{
-    
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-    background: var(--white);
-
-
-    @media screen and (max-width:767px) {
-      &:not(:last-child){
-        margin-bottom: 30px; 
-        }
-    }
-
-   
-    @media screen and (min-width: 768px) {
-      gap: 30px;
-     
-    }
-    
-    @media screen and (min-width: 1200px) {
-      gap: 30px;
+.list__card {
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
     }
   }
+  @media screen and (min-width: 768px) {
+    @include item(1, var(--gap), 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include item(3, var(--gap), 4);
+  }
+  // --items: 4;
+  // flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+
+  background-color: var(--additional-bg-cl);
+}
+
+.card__wrapper {
+  padding: 30px 0;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.card__subject {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+
+  @include fonts(500, 16px, 19px, 00.03em);
+  // font-weight: 500;
+  // font-size: 16px;
+  // line-height: calc(19 / 16);
+  // letter-spacing: 0.03em;
+
+  color: var(--main-txt-cl);
+}
+
+.card__desc {
+  text-align: center;
+
+  @include fonts($fs: 16px, $lh: 19px, $ls: 00.03em);
+  // font-size: 16px;
+  // line-height: calc(19 / 16);
+  // letter-spacing: 0.03em;
+  color: var(--secondary-txt-cl);
+  margin-bottom: 16px;
+}

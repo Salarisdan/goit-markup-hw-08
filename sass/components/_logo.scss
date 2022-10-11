@@ -1,0 +1,33 @@
+.logo {
+    display: block;
+    font-family: var(--secondary-font);
+    @include fonts(700, 26px, 31px, 00.03em);
+    color: var(--active-link-txt);
+    text-decoration: none;
+  }
+  
+  .logo--dark {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  
+    @media screen and (min-width: 768px) {
+      padding-top: 24px;
+      padding-bottom: 24px;
+      margin-right: 87px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
+  }
+  .logo__text--dark {
+    color: var(--main-link-cl);
+  }
+  
+  .logo--bright {
+    margin-bottom: 20px;
+  }
+  
+  .logo__text--bright {
+    color: var(--additional-txt-cl);
+  }

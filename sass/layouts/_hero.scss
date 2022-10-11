@@ -1,125 +1,70 @@
 .hero{
   background: var(--hard-gray);
   max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
- background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/price/Img_lg-@1x.png);             
+  @include section(118px, 118px);
+
+            
  background-position:center;
  background-repeat: no-repeat;
  background-size: cover;
 
- @media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx){
-    background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_lg-@2x.png);
+
+// Mobile
+background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/img_s-@1x.jpg);
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_s-@2x.jpg);
+}
+
+// Tablet
+@media screen and (min-width: 481px) {
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_m-@1x.jpg);
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_m-@2x.jpg);
   }
-// MOBILE IMAGES
-  @media screen and(min-width:480px) {
-    background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/img_sm-@1x.png);
-
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx){
-      background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/img_sm-@2x.png);
-  }
- }
-
- // TABLET IMAGES
- @media screen and(min-width:769px) {
-  background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/img_md-@1x.png);
-
-  @media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx){
-    background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/img_md-@2x.png);
-}
 }
 
-
-// DESCTOP IMAGES
-@media screen and(min-width:1200px) {
-  background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_lg-@1x.png);
-
-  @media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx){
-    background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_lg-@2x.png);
-}
-}
-}
-
-
-
-.hero__container{
-  // DESCTOP
-  @media screen and (min-width:1200px) {
-    width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-  }
+// Desktop
+@media screen and (min-width: 769px) {
   
 
-    // MOBILE
-    @media screen and(min-width:480px) {
-      width: 480px;
-      padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-      
-      
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_l-@1x.jpg);
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/price/Img_l-@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  @include section(200px, 200px);
+}
+}
+
+
+
+
+  
+
+.hero__title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+    color: var(--white);
+
+    @include fonts(900, 26px, 42px, 00.06em);
+    @media screen and (min-width: 768px) {
+      width: 360px;
     }
-
-        // TABLET
-        @media screen and(min-width:768px) {
-          width: 768px;
-          padding-left: 15px;
-        padding-right: 15px;
-        margin-left: auto;
-        margin-right: auto;
-          
-          
-        }
-  }
   
-
-   .hero__bissnes{
-    // DESCTOP
-    @media screen and (min-width:1200px){
-    width: 696px;
-  margin-left: auto;
-  margin-right: auto;
-     font-weight: 900;
-   font-size: 44px;
-   line-height: 1.36;
-   text-align: center;
-   letter-spacing: 0.06em;
-   text-transform: uppercase;
-   color: var(--white);
+    @media screen and (min-width: 1200px) {
+      width: 696px;
+      @include fonts(900, 44px, 60px, 00.06em);
+    }
   }
-
-
-
-
-// TABLET
-@media screen and (max-width:1199px) {
-  width: 360px;
-  margin-left: auto;
-  margin-right: auto;
-  font-style: normal;
-font-weight: 900;
-font-size: 26px;
-line-height: 42px;
-text-align: center;
-letter-spacing: 0.06em;
-text-transform: uppercase;
-color: var(--white);
-}
-   }
    
    
